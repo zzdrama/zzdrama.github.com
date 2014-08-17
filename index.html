@@ -183,10 +183,19 @@ function parallaxScroll(scroll) {
         finished = true;
         newLeft = (scroll > 0 ? l : l + w);
     }
-    // Change transparency of view
-    $('.background').css('opacity', view_transparancy);
-    if(view_transparancy > 0.2)
-        view_transparancy = view_transparancy - 0.01;
+
+    if (scroll > 0){
+        // Change transparency of view
+        $('.background').css('opacity', view_transparancy);
+        if(view_transparancy > 0.2)
+            view_transparancy = view_transparancy - 0.01;        
+    } else {
+        // Change transparency of view
+        $('.background').css('opacity', view_transparancy);
+        if(view_transparancy < 1)
+            view_transparancy = view_transparancy + 0.01;        
+    }
+
     // set new position
     $moving.css('left', newLeft);
     $moving.css('top', newTop);
@@ -214,7 +223,6 @@ function parallaxScroll(scroll) {
 
 </head>
 <body>
-  
 <div class="viewport" id="view">
     <div class="background" style="z-index: -100;">
     </div>
