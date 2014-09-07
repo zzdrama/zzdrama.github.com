@@ -70,6 +70,7 @@ var scrollUp = false;
 var scroll = 0;
 var $view = $('#view');
 var view_transparancy = 1;
+var leg_transparancy = 1;
 var l = 0;
 var t = 0;
 var w = $view.width();
@@ -187,13 +188,17 @@ function parallaxScroll(scroll) {
     if (scroll > 0){
         // Change transparency of view
         $('.background').css('opacity', view_transparancy);
+        $('.leg').css('opacity', leg_transparancy);
         if(view_transparancy > 0.2)
-            view_transparancy = view_transparancy - 0.01;        
+            view_transparancy = view_transparancy - 0.01;   
+        leg_transparancy = (leg_transparancy>=0) ? leg_transparancy-0.01 : 0;     
     } else {
         // Change transparency of view
         $('.background').css('opacity', view_transparancy);
+        $('.leg').css('opacity', leg_transparancy);
         if(view_transparancy < 1)
-            view_transparancy = view_transparancy + 0.01;        
+            view_transparancy = view_transparancy + 0.01;     
+        leg_transparancy = (leg_transparancy<=1) ? leg_transparancy+0.01 : 1;       
     }
 
     // set new position
@@ -226,8 +231,8 @@ function parallaxScroll(scroll) {
 
 <div class="background" style="z-index: -100;">
 </div>
-    
-<div class="nav_bar" style="margin-top: 45px; width: 966px; height: 115px; margin-left: auto; margin-right: auto;"> 
+
+<div class="nav_bar" style="z-index: 999999; margin-top: 45px; width: 966px; height: 115px; margin-left: auto; margin-right: auto;"> 
     <div alt="homepage" style="margin-top: 15px; margin-bottom: 15px; float: left; background-image: url('images/nav_bar/aa01.png'); width:45px; height: 45px;"></div>
     <div alt="activities" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa02.png'); width: 45px; height: 45px;"></div>
     <div alt="members" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa03.png'); width: 45px; height: 45px;"></div>
@@ -235,22 +240,42 @@ function parallaxScroll(scroll) {
     <div alt="join" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 121px; background-image: url('images/nav_bar/aa04.png'); width: 45px; height: 45px;"></div>
     <div alt="shows" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa05.png'); width: 45px; height: 45px;"></div>
     <div alt="about" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa06.png'); width: 45px; height: 45px;"></div>
-
 </div>
 
 <div class="viewport" id="view">
 
-
-    
-
     <div class="black" style="z-index: -200; background-color: black;">
     </div>
-    <div class="parallax from-bottom" style="background-image: url('images/aa01.png'); width: 99%; height: 99%;">
-        From Bottom
+
+    <div class="leg" style="margin-top: 300px; width: 1000px; height: 115px; margin-left: auto; margin-right: auto;"> 
+        <div style="margin-top: 15px; margin-bottom: 15px; float: left; background-image: url('images/leg/leg01.png'); width:87px; height: 279px;"></div>
+        <div style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 53px; background-image: url('images/leg/leg02.png'); width: 98px; height: 279px;"></div>
+        <div style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 48px; background-image: url('images/leg/leg03.png'); width: 77px; height: 279px;"></div>
+        <div style="float: left; margin-left: 98px; background-image: url('images/leg/leg04.png'); width: 81px; height: 279px;"></div>
+        <div style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 92px; background-image: url('images/leg/leg05.png'); width: 87px; height: 279px;"></div>
+        <div style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 59px; background-image: url('images/leg/leg06.png'); width: 77px; height: 279px;"></div>
+        <div style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 73px; background-image: url('images/leg/leg07.png'); width: 69px; height: 279px;"></div>
     </div>
+
+    <div class="parallax from-bottom" style="width: 99%; height: 99%;">
+        <div style="margin-left: auo; margin-right: auto;">
+            <div style="width: 50%">
+                <div style="float: left; background-image: url('images/aa01.png'); width: 315px; height: 400px">
+                </div>
+            </div>
+            <div>
+                <div style="float: left; background-image: url('images/aa02.png'); width: 315px; height: 400px">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="parallax from-bottom pin" style="background-color: black; width: 99%; height: 15%;">
         From Bottom
     </div>
+
+    <!--
+
     <div class="parallax from-left" style="background-color: blue; width: 33%; height: 33%;">
         From Left
     </div>
@@ -263,6 +288,7 @@ function parallaxScroll(scroll) {
     <div class="parallax from-bottom" style="background-color: purple; width: 99%; height: 99%;">
         From Bottom
     </div>
+-->
 </div>
 
   
