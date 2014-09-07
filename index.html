@@ -187,13 +187,11 @@ function parallaxScroll(scroll) {
     if (scroll > 0){
         // Change transparency of view
         $('.background').css('opacity', view_transparancy);
-        $('.nav_bar').css('opacity', view_transparancy);
         if(view_transparancy > 0.2)
             view_transparancy = view_transparancy - 0.01;        
     } else {
         // Change transparency of view
         $('.background').css('opacity', view_transparancy);
-        $('.nav_bar').css('opacity', view_transparancy);
         if(view_transparancy < 1)
             view_transparancy = view_transparancy + 0.01;        
     }
@@ -225,20 +223,25 @@ function parallaxScroll(scroll) {
 
 </head>
 <body>
+
+<div class="background" style="z-index: -100;">
+</div>
+    
+<div class="nav_bar" style="margin-top: 45px; width: 966px; height: 115px; margin-left: auto; margin-right: auto;"> 
+    <div alt="homepage" style="margin-top: 15px; margin-bottom: 15px; float: left; background-image: url('images/nav_bar/aa01.png'); width:45px; height: 45px;"></div>
+    <div alt="activities" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa02.png'); width: 45px; height: 45px;"></div>
+    <div alt="members" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa03.png'); width: 45px; height: 45px;"></div>
+    <div alt="logo" style="float: left; margin-left: 121px; background-image: url('images/nav_bar/logo.png'); width: 74px; height: 115px;"></div>
+    <div alt="join" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 121px; background-image: url('images/nav_bar/aa04.png'); width: 45px; height: 45px;"></div>
+    <div alt="shows" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa05.png'); width: 45px; height: 45px;"></div>
+    <div alt="about" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa06.png'); width: 45px; height: 45px;"></div>
+
+</div>
+
 <div class="viewport" id="view">
-    <div class="background" style="z-index: -100;">
-    </div>
 
-    <div class="nav_bar" style="margin-top: 45px; width: 966px; height: 115px; margin-left: auto; margin-right: auto;"> 
-        <div alt="homepage" style="margin-top: 15px; margin-bottom: 15px; float: left; background-image: url('images/nav_bar/aa01.png'); width:45px; height: 45px;"></div>
-        <div alt="activities" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa02.png'); width: 45px; height: 45px;"></div>
-        <div alt="members" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa03.png'); width: 45px; height: 45px;"></div>
-        <div alt="logo" style="float: left; margin-left: 121px; background-image: url('images/nav_bar/logo.png'); width: 74px; height: 115px;"></div>
-        <div alt="join" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 121px; background-image: url('images/nav_bar/aa04.png'); width: 45px; height: 45px;"></div>
-        <div alt="shows" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa05.png'); width: 45px; height: 45px;"></div>
-        <div alt="about" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/aa06.png'); width: 45px; height: 45px;"></div>
 
-    </div>
+    
 
     <div class="black" style="z-index: -200; background-color: black;">
     </div>
