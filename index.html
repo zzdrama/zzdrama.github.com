@@ -187,11 +187,13 @@ function parallaxScroll(scroll) {
     if (scroll > 0){
         // Change transparency of view
         $('.background').css('opacity', view_transparancy);
+        $('.nav_bar').css('opacity', view_transparancy);
         if(view_transparancy > 0.2)
             view_transparancy = view_transparancy - 0.01;        
     } else {
         // Change transparency of view
         $('.background').css('opacity', view_transparancy);
+        $('.nav_bar').css('opacity', view_transparancy);
         if(view_transparancy < 1)
             view_transparancy = view_transparancy + 0.01;        
     }
@@ -227,7 +229,7 @@ function parallaxScroll(scroll) {
     <div class="background" style="z-index: -100;">
     </div>
 
-    <div style="margin-top: 45px; width: 966px; height: 115px; margin-left: auto; margin-right: auto;"> 
+    <div class="nav_bar" style="margin-top: 45px; width: 966px; height: 115px; margin-left: auto; margin-right: auto;"> 
         <div alt="homepage" style="margin-top: 15px; margin-bottom: 15px; float: left; background-image: url('images/nav_bar/a01.jpg'); width:45px; height: 45px;"></div>
         <div alt="activities" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/a02.jpg'); width: 45px; height: 45px;"></div>
         <div alt="members" style="margin-top: 15px; margin-bottom: 15px; float: left; margin-left: 95px; background-image: url('images/nav_bar/a03.jpg'); width: 45px; height: 45px;"></div>
