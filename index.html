@@ -190,14 +190,14 @@ function parallaxScroll(scroll) {
         $('.background').css('opacity', view_transparancy);
         $('.leg').css('opacity', leg_transparancy);
         if(view_transparancy > 0.2)
-            view_transparancy = view_transparancy - 0.01;   
+            view_transparancy = view_transparancy - 0.02;   
         leg_transparancy = (leg_transparancy>=0) ? leg_transparancy-0.01 : 0;     
     } else {
         // Change transparency of view
         $('.background').css('opacity', view_transparancy);
         $('.leg').css('opacity', leg_transparancy);
         if(view_transparancy < 1)
-            view_transparancy = view_transparancy + 0.01;     
+            view_transparancy = view_transparancy + 0.02;     
         leg_transparancy = (leg_transparancy<=1) ? leg_transparancy+0.01 : 1;       
     }
 
